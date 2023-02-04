@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
-const port = 8080;
+const port = 3000;
+
 
 const adminRouter = require('./routes/admin.routes');
+const adnRouter = require('./routes/admin.routes');
+const adinRouter = require('./routes/admin.routes');
+
 const apiRouter = require('./routes/api.routes');
 const usersRouter = require('./routes/users.routes');
 
