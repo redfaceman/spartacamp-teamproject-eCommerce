@@ -9,7 +9,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: auto;
 }
 
 .login-box {
@@ -36,4 +35,10 @@
 
 .margin-bottom {
   margin-bottom: 20px;
+}
+
+.kakaoLogin img {
+  margin: 5% auto;
+  width: 40%;
+  height: 60%;
 }

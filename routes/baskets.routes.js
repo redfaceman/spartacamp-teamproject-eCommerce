@@ -1,11 +1,15 @@
 const express = require('express');
-const router = express.Router();
-
+const BasketController = require('../controllers/baskets.controller');
 const authMiddleware = require('../middlewares/auth');
 
-const BasketsController = require('../controllers/baskets.controller');
-const basketsController = new BasketsController();
+const router = express.Router();
+const basketController = new BasketController();
 
-router.post('/', authMiddleware, basketsController.CreateBasket);
+router.route('/').get(authMiddleware, basketController.getBaskets).post(basketsController.CreateBasket);
+router
+  .route('/:id')
+  .patch(authMiddleware, basketController.patchBasketQuantity)
+  .delete(authMiddleware, basketController.deleteBasket);
+router.post('/order', authMiddleware, basketController.orderBasket);
 
 module.exports = router;
