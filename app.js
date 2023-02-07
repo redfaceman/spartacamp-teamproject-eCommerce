@@ -119,6 +119,10 @@ app.get('/', (req, res) => {
   res.render('home');
 })
 
+app.get('/:productId', (req, res) => {
+  res.render('productSpec');
+})
+
 //* 서버 리슨
 server.listen(PORT, () => {
   console.log(`✅ 서버가 연결되었습니다. http://localhost:${PORT}`);

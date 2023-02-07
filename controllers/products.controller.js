@@ -135,7 +135,7 @@ class ProductsController {
     const productspec = await this.productService.findProductSpec(productId);
     // console.log(productspec);
 
-    res.status(200).re({ data: productspec })
+    res.status(200).json({ data: productspec })
   }
 }
 

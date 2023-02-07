@@ -129,6 +129,7 @@ class ProductService {
       };
     });
   }
+  
   findProductSpec = async (productId) => {
     const findProductSpec = await this.productRepository.getProductDataById(productId);
     if (!findProductSpec) throw new Error("Review doesn't exist");
